@@ -20,6 +20,6 @@ Promise.map(URLs, function(URL){
     return processAndSaveAllInDB(result);
 }).then(function(err){
     console.log("all data saved to db");
-}).catch(function(e){
-    console.log("final",e);
+}).catch(SyntaxError ,function(e){
+    console.log("final", SyntaxError ,e, e instanceof SyntaxError);
 });
